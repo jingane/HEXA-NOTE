@@ -24,7 +24,7 @@ if not st.session_state['logged_in']:
     if st.button('Login'):
         if login(username, password):
             st.session_state['logged_in'] = True
-            st.success('Logged in successfully')
+            st.experimental_rerun()
         else:
             st.error('Invalid username or password')
 else:
